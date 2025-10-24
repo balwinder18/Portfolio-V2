@@ -67,9 +67,9 @@ export default function Home() {
                 <FadeInSection delay={0.2} className="max-w-2xl mx-auto px-6 items-center"><Hero /></FadeInSection>
                 <FadeInSection delay={0.2} className="max-w-2xl mx-auto px-6 items-center"><Skills /></FadeInSection>
                 <FadeInSection delay={0.2} className="max-w-2xl mx-auto px-6 items-center"><Experience /></FadeInSection>
-                <FadeInSection delay={0.2} className="max-w-2xl mx-auto px-6 items-center"><Education /></FadeInSection>
                 <FadeInSection delay={0.2} className="max-w-2xl mx-auto px-6 items-center"><Projects /></FadeInSection>
-
+                <FadeInSection delay={0.2} className="max-w-2xl mx-auto px-6 items-center"><Education /></FadeInSection>
+            
                 <FadeInSection delay={0.2} className="max-w-2xl mx-auto px-6 items-center"><Resume/></FadeInSection>
                 <FadeInSection delay={0.2} className="max-w-2xl mx-auto px-6 items-center"><Socials/></FadeInSection>
                 <FadeInSection delay={0.2} className="max-w-2xl mx-auto px-3 items-center"><Contacts/></FadeInSection>
