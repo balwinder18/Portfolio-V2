@@ -5,11 +5,29 @@ import athlend from '../../public/images/athlend.PNG';
 import esign from '../../public/images/esign.PNG'
 import portfolio from '../../public/images/portfolio.PNG'
 import codeArena from '../../public/images/codeArena.PNG'
+import productagent from '../../public/images/productagent.JPG'
 import Image from "next/image";
 
 
 const projects = [
+  
+  {
+    title: "Product AI Agent",
+    desc: "Analyzes products to give instant market sentiment and competitor insights from real time web data.",
+    tech: ["Python", "FastAPI", "LangGraph","Nextjs"],
+    site: "https://product-analysis-agent.vercel.app/",
+    source: "https://github.com/balwinder18/Product-Analysis-Agent",
+    img: productagent,
+  },
 
+  {
+    title: "CodeArena",
+    desc: "A real-time 1v1 competitive coding platform, where users can battle by solving DSA problems in private rooms.",
+    tech: ["Next.js", "Javascript", "Node.js","Socket.IO","TailwindCSS","WebSockets"],
+    site: "https://code-arena-omega.vercel.app/",
+    source: "https://github.com/balwinder18/CodeArena",
+    img: codeArena,
+  },
   {
     title: "Athlend",
     desc: "A Local Sports Ground Renting website with AI enabled chatbot for user Queries",
@@ -19,14 +37,7 @@ const projects = [
     img: athlend,
   },
 
-   {
-    title: "CodeArena",
-    desc: "A real-time 1v1 competitive coding platform, where users can battle by solving DSA problems in private rooms.",
-    tech: ["Next.js", "Javascript", "Node.js","Socket.IO","TailwindCSS","WebSockets"],
-    site: "https://code-arena-omega.vercel.app/",
-    source: "https://github.com/balwinder18/CodeArena",
-    img: codeArena,
-  },
+   
 
   {
     title: "Take Notes",
