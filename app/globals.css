@@ -3,8 +3,16 @@
 
 
 body {
-  background-color: black;
+  @apply transition-colors duration-300;
 }
+
+
+
+@theme {
+  --color-primary: black; 
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
 
 .is{
       color: #14cf93;

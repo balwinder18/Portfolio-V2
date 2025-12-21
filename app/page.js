@@ -1,6 +1,6 @@
 'use client'
 import Image from "next/image";
- import Hero from './components/Hero';
+import Hero from './components/Hero';
 import Experience from './components/Experience';
 import Education from './components/Education';
 import Skills from './components/Skills';
@@ -17,22 +17,20 @@ import Navbar from '../app/components/Navbar'
 import SpotlightText from "./components/Spotlight";
 import { gsap } from "gsap";
 
-
 function loader() {
   var tl = gsap.timeline();
   tl
     .to("#black", {
-      height: -10,
+      height: 0,
       duration: 1,
       delay: 1,
+      ease: "power2.inOut"
     })
-
-    
-
     .to(".reveal", {
       opacity: 0,
-    })
-
+      duration: 0.5
+    }, "<")
+    .set("#black", { display: "none" })
     .to(".disappear", {
       opacity: 1,
       duration: 1.5, 
@@ -46,37 +44,38 @@ export default function Home() {
     loader();
   }, [])
 
-
-
   return (
    
 <>
-    <div className="bg-black h-screen w-full flex justify-center items-center" id="black">
+   
+    <div className="bg-black h-screen w-full flex justify-center items-center fixed top-0 left-0 z-[9999] overflow-hidden" id="black">
         <div id="name">
           <h1 className="text-white reveal"><span>Balwinder Singh's</span><span className="text-green-500 italic"> Portfolio</span>
           </h1>
         </div>
+    </div>
 
-      </div>
-
-    <div className="relative disappear opacity-0">
-            <SpotlightText /> 
-
-            <main className="relative z-20 flex flex-col min-h-[100dvh] max-w-2xl mx-auto lg:px-6 xl:px-6 2xl:px-6 px-3 items-center bg-transparent">
-
-                <FadeInSection delay={0.2} className="max-w-2xl mx-auto px-6 items-center"><Hero /></FadeInSection>
-                <FadeInSection delay={0.2} className="max-w-2xl mx-auto px-6 items-center"><Skills /></FadeInSection>
-                <FadeInSection delay={0.2} className="max-w-2xl mx-auto px-6 items-center"><Experience /></FadeInSection>
-                <FadeInSection delay={0.2} className="max-w-2xl mx-auto px-6 items-center"><Projects /></FadeInSection>
-                <FadeInSection delay={0.2} className="max-w-2xl mx-auto px-6 items-center"><Education /></FadeInSection>
+   
+    <div className="relative w-full min-h-screen bg-white dark:bg-black transition-colors duration-300"> 
             
-                <FadeInSection delay={0.2} className="max-w-2xl mx-auto px-6 items-center"><Resume/></FadeInSection>
-                <FadeInSection delay={0.2} className="max-w-2xl mx-auto px-6 items-center"><Socials/></FadeInSection>
-                <FadeInSection delay={0.2} className="max-w-2xl mx-auto px-3 items-center"><Contacts/></FadeInSection>
-                <FadeInSection delay={0.2} className="max-w-2xl mx-auto px-6 items-center"><Footer /></FadeInSection>
-                <Navbar/>
-            </main>
-        </div>
-        </>
+            <div className="disappear opacity-0">
+                <main className="relative z-20 flex flex-col min-h-[100dvh] w-full max-w-5xl mx-auto items-center bg-transparent">
+                    
+                    <FadeInSection delay={0.2} className="w-full px-4 sm:px-6 md:px-8"><Hero /></FadeInSection>
+                    <FadeInSection delay={0.2} className="w-full px-4 sm:px-6 md:px-8"><Experience /></FadeInSection>
+                    <FadeInSection delay={0.2} className="w-full px-4 sm:px-6 md:px-8"><Projects /></FadeInSection>
+                    <FadeInSection delay={0.2} className="w-full px-4 sm:px-6 md:px-8"><Skills /></FadeInSection>
+                    
+                    <FadeInSection delay={0.2} className="w-full px-4 sm:px-6 md:px-8"><Education /></FadeInSection>
+                
+                    <FadeInSection delay={0.2} className="w-full px-4 sm:px-6 md:px-8"><Resume/></FadeInSection>
+                    <FadeInSection delay={0.2} className="w-full px-4 sm:px-6 md:px-8"><Socials/></FadeInSection>
+                    <FadeInSection delay={0.2} className="w-full px-4 sm:px-6 md:px-8"><Contacts/></FadeInSection>
+                    <FadeInSection delay={0.2} className="w-full px-4 sm:px-6 md:px-8"><Footer /></FadeInSection>
+                    <Navbar/>
+                </main>
+            </div>
+    </div>
+</>
   );
 }

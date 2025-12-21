@@ -20,160 +20,88 @@ import datastructure from '../../public/images/datastructure.png'
 import algorithms from '../../public/images/algorithms.png'
 import Redis from '../../public/images/redis.png'
 import Langchain from '../../public/images/langchain.png'
+import Image from "next/image";
+import { useState } from 'react';
+import { ArrowDown, ArrowUp } from 'lucide-react'; 
 
-export const techStack = [
-  { label: "React.js", icon: react },
-  { label: "Next.js", icon: next },
+
+export const allSkills = [
   { label: "JavaScript", icon: JavaScript },
   { label: "TypeScript", icon: TypeScript },
   { label: "Node.js", icon: Node },
+  { label: "React.js", icon: react },
+  { label: "Next.js", icon: next },
   { label: "Express.js", icon: Express },
-  { label: "Redis", icon: Redis },
-   { label: "LangChain", icon: Langchain },
-  { label: "Redux", icon: Redux },
+   { label: "Python", icon: Python },
+   { label: "PostgreSQL", icon: datastructure },
   { label: "Tailwind", icon: Tailwind },
- 
-];
-
-
-export const techStack2 = [
-  
-   { label: "ShadCN", icon: shadcn },
-   { label: "Java", icon: Java },
-  { label: "NPM", icon: NPM },
-  { label: "Python", icon: Python },
-  { label: "C", icon: C },
   { label: "MongoDB", icon: MongoDB },
-  
+  { label: "Redis", icon: Redis },
+  { label: "ShadCN", icon: shadcn },
+  { label: "Java", icon: Java },
+ 
+  { label: "C", icon: C },
+  { label: "Redux", icon: Redux },
+   
   { label: "GitHub", icon: GitHub },
   { label: "Postman", icon: Postman },
   { label: "Vercel", icon: Vercel },
-  { label: "Data Structures", icon: datastructure },
-  { label: "Algorithms", icon: algorithms },
+  { label: "DSA", icon: algorithms },
+  { label: "LangChain", icon: Langchain },
+  { label: "NPM", icon: NPM },
 ];
 
-
- const allSkills = [...techStack, ...techStack2];
-
-
-import Image from "next/image";
-import { useState } from 'react';
-
 export default function Skills() {
-
-
-const [isPopupOpen, setIsPopupOpen] = useState(false);
-
-  const openPopup = () => setIsPopupOpen(true);
-  const closePopup = () => setIsPopupOpen(false);
-
+  const [showAll, setShowAll] = useState(false);
+  
+  const INITIAL_COUNT = 8;
+  
+  const displayedSkills = showAll ? allSkills : allSkills.slice(0, INITIAL_COUNT);
 
   return (
-   
+    <section className="w-full mt-10 text-gray-900 dark:text-white relative transition-all duration-300">
+      
+      <div className="flex items-center gap-3 mb-6">
+        <div className="w-1.5 h-7 bg-black dark:bg-white rounded-full transition-colors duration-300"></div>
+        <h2 className="text-2xl font-bold tracking-tight">Skills</h2>
+      </div>
 
-
-  <section className="w-full text-white overflow-hidden relative">
-      <h2 className="text-center text-xl font-bold mb-6">What I work with</h2>
-
-      {/* First Row */}
-      <div className="relative w-full overflow-hidden">
-        <div className="animate-slide flex whitespace-nowrap gap-6 px-4">
-          {[...techStack, ...techStack].map((tech, index) => (
-            <div
-              key={`row1-${index}`}
-              className="flex ml-4 items-center gap-1 text-sm sm:text-base text-gray-300 hover:text-white transition"
-            >
-              <Image
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 transition-all duration-500 ease-in-out">
+        {displayedSkills.map((tech, index) => (
+          <div
+            key={index}
+            className="flex items-center justify-center gap-3 py-3 px-4 bg-gray-100 dark:bg-[#1c1c1c] border border-gray-200 dark:border-gray-800 rounded-lg shadow-sm hover:bg-gray-200 dark:hover:bg-gray-800 hover:border-gray-300 dark:hover:border-gray-600 transition-all duration-300 group animate-in fade-in zoom-in"
+          >
+            <div className="w-5 h-5 relative shrink-0">
+                <Image
                 src={tech.icon}
                 alt={tech.label}
-                width={20}
-                height={20}
-                className="w-5 h-5 object-contain"
-              />
-              <span>{tech.label}</span>
+                fill
+                className="object-contain"
+                />
             </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Second Row (Delayed) */}
-      <div className="relative w-full overflow-hidden mt-3">
-        <div className="animate-slide-delayed flex whitespace-nowrap gap-6 px-4">
-          {[...techStack2, ...techStack2].map((tech, index) => (
-            <div
-              key={`row2-${index}`}
-              className="flex ml-4 items-center gap-1 text-sm sm:text-base text-gray-300 hover:text-white transition"
-            >
-              <Image
-                src={tech.icon}
-                alt={tech.label}
-                width={20}
-                height={20}
-                className="w-5 h-5 object-contain"
-              />
-              <span>{tech.label}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* See All Button */}
-
- 
-
-        <div className="flex justify-center mt-6">
-        <button
-          onClick={openPopup}
-         className="text-[#14fca9] underline hover:text-white transition"
-           >
-          See All Skills
-        </button>
-      </div>
-
-      {/* Popup Modal */}
-      {isPopupOpen && (
-        <div className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50 p-4">
-          <div className="bg-black/95 border border-gray-800 rounded-xl max-w-4xl w-full max-h-[80vh] overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-black [&::-webkit-scrollbar-thumb]:bg-gray-800 [&::-webkit-scrollbar-thumb]:rounded-full ">
-            {/* Popup Header */}
-            <div className="flex justify-between items-center p-6 border-b border-gray-800">
-              <h3 className="text-xl font-bold text-white">All Skills & Technologies</h3>
-              <button
-                onClick={closePopup}
-                className="text-gray-400 hover:text-teal-400 transition-colors text-2xl leading-none w-8 h-8 flex items-center justify-center hover:bg-teal-500/10 rounded-full"
-              >
-                ×
-              </button>
-            </div>
-
-            {/* Skills Grid */}
-            <div className="p-6">
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-                {allSkills.map((tech, index) => (
-                  <div
-                    key={index}
-                    className="flex flex-col items-center p-4 hover:bg-gray-800/70 rounded-lg border border-gray-800 hover:border-teal-500/50 transition-all duration-200 group hover:shadow-lg hover:shadow-teal-500/10"
-                  >
-                    <Image
-                      src={tech.icon}
-                      alt={tech.label}
-                      width={40}
-                      height={40}
-                      className="w-10 h-10 object-contain mb-2 group-hover:scale-110 transition-transform duration-200"
-                    />
-                    <span className="text-sm text-gray-300 group-hover:text-white transition-colors text-center">
-                      {tech.label}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
+            <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-black dark:group-hover:text-white truncate transition-colors duration-300">
+              {tech.label}
+            </span>
           </div>
+        ))}
+      </div>
+
+      {allSkills.length > INITIAL_COUNT && (
+        <div className="flex justify-end mt-4">
+          <button
+            onClick={() => setShowAll(!showAll)}
+            className="flex items-center gap-2 px-5 py-2 text-[#14fca9] hover:text-[#0eab73] dark:hover:text-[#14fca9] text-sm font-semibold rounded-lg shadow-sm hover:shadow-md transition-all transform hover:-translate-y-0.5 active:scale-95"
+          >
+            {showAll ? (
+                <>Show Less <ArrowUp size={16} /></>
+            ) : (
+                <>See more <ArrowDown size={16} /></>
+            )}
+          </button>
         </div>
       )}
+
     </section>
-
-
   );
 }
-
-
