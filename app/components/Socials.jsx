@@ -10,7 +10,7 @@ const Socials = () => {
         
         <div className="flex items-center gap-3 mb-8">
             <div className="w-1.5 h-7 bg-black dark:bg-white rounded-full transition-colors duration-300"></div>
-            <h2 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white transition-colors duration-300">Socials</h2>
+            <h2 className="lg:text-2xl text-lg font-bold tracking-tight text-gray-900 dark:text-white transition-colors duration-300">Socials</h2>
         </div>
 
         <div className="flex flex-col items-center space-y-6 lg:hidden">

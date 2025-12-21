@@ -63,7 +63,7 @@ export default function Skills() {
       
       <div className="flex items-center gap-3 mb-6">
         <div className="w-1.5 h-7 bg-black dark:bg-white rounded-full transition-colors duration-300"></div>
-        <h2 className="text-2xl font-bold tracking-tight">Skills</h2>
+        <h2 className="lg:text-2xl text-lg font-bold tracking-tight">Skills</h2>
       </div>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 transition-all duration-500 ease-in-out">
@@ -91,7 +91,7 @@ export default function Skills() {
         <div className="flex justify-end mt-4">
           <button
             onClick={() => setShowAll(!showAll)}
-            className="flex items-center gap-2 px-5 py-2 text-[#14fca9] hover:text-[#0eab73] dark:hover:text-[#14fca9] text-sm font-semibold rounded-lg shadow-sm hover:shadow-md transition-all transform hover:-translate-y-0.5 active:scale-95"
+            className="flex items-center gap-2 px-5 py-2 text-emerald-700 dark:text-[#14cf93] hover:text-[#0eab73] dark:hover:text-[#14cfca9] text-sm font-semibold rounded-lg shadow-sm hover:shadow-md transition-all transform hover:-translate-y-0.5 active:scale-95"
           >
             {showAll ? (
                 <>Show Less <ArrowUp size={16} /></>

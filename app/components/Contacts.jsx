@@ -5,10 +5,10 @@ const Contacts = () => {
     const router = useRouter();
     
     return (
-      <div className="w-full mt-14 rounded-xl text-lg flex flex-col justify-center items-center">
+      <div className="w-full mt-4 rounded-xl text-lg flex flex-col justify-center items-center">
             
             <div className="mx-5 text-center mt-5 flex flex-col justify-center items-center">
-                <p className="text-xs sm:text-base text-[#14fca9] font-bold tracking-wide">
+                <p className="text-xs sm:text-base text-emerald-700 dark:text-[#14cf93] font-bold tracking-wide">
                     YOU CAN ALWAYS CONNECT WITH ME TO DISCUSS ABOUT TECH, ENGINEERING AND DEVELOPMENT!
                 </p>
             </div>
@@ -37,7 +37,7 @@ const Contacts = () => {
 
             </div>
 
-            <div className="text-[#14fca9] mx-5 text-center my-5 flex flex-col justify-center items-center">
+            <div className="text-emerald-700 dark:text-[#14cf93] mx-5 text-center my-5 flex flex-col justify-center items-center">
                 <p className="text-xs sm:text-base font-medium tracking-wide">
                     FEEL FREE TO REACH OUT AND COLLABORATE USING THESE DETAILS OR BY THE SOCIAL LINKS ATTACHED
                 </p>

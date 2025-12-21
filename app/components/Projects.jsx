@@ -78,11 +78,11 @@ const Projects = () => {
   const visibleProjects = showAll ? projects : projects.slice(0, 2); 
 
   return (
-    <section className="w-full mt-10 mb-20 transition-colors duration-300">
+    <section className="w-full mt-4 mb-4 transition-colors duration-300">
       
-      <div className="flex items-center gap-3 mb-8">
+      <div className="flex items-center gap-3 mb-4">
         <div className="w-1.5 h-7 bg-black dark:bg-white rounded-full transition-colors duration-300"></div>
-        <h2 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white transition-colors duration-300">Projects</h2>
+        <h2 className="lg:text-2xl text-lg font-bold tracking-tight text-gray-900 dark:text-white transition-colors duration-300">Projects</h2>
       </div>
 
        <div className="grid md:grid-cols-2 gap-6">
@@ -155,7 +155,7 @@ const Projects = () => {
         <div className="text-center mt-6">
           <button
             onClick={() => setShowAll(!showAll)}
-            className="text-[#14fca9] font-semibold underline hover:text-green-600 dark:hover:text-white transition"
+            className="text-emerald-700 dark:text-[#14cf93] font-semibold underline hover:text-green-600 dark:hover:text-white transition"
           >
             {showAll ? "See Less" : "See More"}
           </button>

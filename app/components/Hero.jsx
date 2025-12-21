@@ -12,7 +12,7 @@ export default function Hero (){
 <>
  <section
       id="hero"
-      className="w-full text-gray-900 dark:text-white flex flex-col items-start justify-start lg:pt-16 xl:pt-16 2xl:pt-16 pt-6 pb-4 transition-colors duration-300"
+      className="w-full text-gray-900 dark:text-white flex flex-col items-start justify-start lg:pt-16 xl:pt-16 2xl:pt-16 pt-6 transition-colors duration-300"
     >
       <div className="mb-6">
         <div className="flex items-center gap-2 px-3 py-1 bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-full transition-colors duration-300">
@@ -40,7 +40,7 @@ export default function Hero (){
               />
             </div>
 
-            <span className="text-[#14cf93] whitespace-nowrap">Balwinder</span>
+            <span className="dark:text-[#14cf93] text-emerald-700 whitespace-nowrap">Balwinder</span>
             
           </span>
           </h1>

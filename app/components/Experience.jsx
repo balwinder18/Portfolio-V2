@@ -8,11 +8,11 @@ function Experience() {
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <section id="work" className="flex mt-8 flex-col gap-y-6 text-gray-900 dark:text-white w-full transition-colors duration-300">
+    <section id="work" className="flex mt-4 flex-col gap-y-2 text-gray-900 dark:text-white w-full transition-colors duration-300">
       
-      <div className="flex items-center gap-3 transform -translate-y-1.5 opacity-100 blur-0 mb-2">
+      <div className="flex items-center gap-3 transform -translate-y-1.5 opacity-100 blur-0">
         <div className="w-1.5 h-7 bg-black dark:bg-white rounded-full transition-colors duration-300"></div>
-        <h2 className="text-2xl font-bold tracking-tight">Work Experience</h2>
+        <h2 className="lg:text-2xl text-lg font-bold tracking-tight">Work Experience</h2>
       </div>
 
       <div className="group relative">
@@ -20,10 +20,10 @@ function Experience() {
             onClick={() => setExpanded(!expanded)}
             className="w-full text-left focus:outline-none block"
         >
-            <div className="flex items-start p-3 rounded-xl transition-colors duration-300 hover:bg-gray-100 dark:hover:bg-white/5 border border-transparent">
+            <div className="flex items-start p-2 rounded-xl transition-colors duration-300 hover:bg-gray-100 dark:hover:bg-white/5 border border-transparent">
             
             <div className="flex-none">
-                <span className="relative flex overflow-hidden rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#1c1c1c] w-12 h-12 items-center justify-center transition-colors duration-300">
+                <span className="relative flex overflow-hidden rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#1c1c1c] w-8 h-8 lg:w-12 lg:h-12 items-center justify-center transition-colors duration-300">
                 <Image
                     src={banao}
                     alt="Banao Technologies"
@@ -36,7 +36,7 @@ function Experience() {
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-4">
                     
                     <div>
-                        <h3 className="text-gray-900 dark:text-white font-semibold text-lg flex items-center gap-2 transition-colors duration-300">
+                        <h3 className="text-gray-900 dark:text-white font-semibold text-sm lg:text-lg flex items-center gap-2 transition-colors duration-300">
                             Banao Technologies
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -58,7 +58,7 @@ function Experience() {
                     </div>
 
                     <div className="text-left sm:text-right mt-1 sm:mt-0">
-                        <span className="text-sm font-medium text-[#14cf93] tabular-nums">
+                        <span className="text-sm font-medium text-emerald-700 dark:text-[#14cf93] tabular-nums">
                             Jan 2025 - June 2025
                         </span>
                     </div>

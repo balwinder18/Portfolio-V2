@@ -7,7 +7,7 @@ const Education = () => (
     
     <div className="flex items-center gap-3 mb-6">
        <div className="w-1.5 h-7 bg-black dark:bg-white rounded-full transition-colors duration-300"></div>
-       <h2 className="text-2xl font-bold tracking-tight">Education</h2>
+       <h2 className="lg:text-2xl text-lg font-bold tracking-tight">Education</h2>
     </div>
 
     <div className="group">
@@ -48,7 +48,7 @@ const Education = () => (
                     </div>
 
                     <p className="font-sans text-sm text-gray-600 dark:text-gray-400 mt-1 font-medium transition-colors duration-300">
-                        B.Tech in Electronics and Communication Engineering
+                        B.Tech
                     </p>
                     
                 </div>
