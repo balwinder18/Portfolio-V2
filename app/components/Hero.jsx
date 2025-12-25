@@ -64,7 +64,7 @@ export default function Hero (){
         </div>
 
         <div className="mt-2 w-full max-w-3xl"> 
-            <p className="text-base font-semibold sm:text-lg text-gray-800 dark:text-gray-200 leading-relaxed transition-colors duration-300">
+            <p className="text-base  sm:text-lg text-gray-800 dark:text-gray-200 leading-relaxed transition-colors duration-300">
               A Full Stack Developer with expertise in building scalable applications using Node.js, Python, and cloud technologies.
             </p>
         </div>
