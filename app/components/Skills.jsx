@@ -28,12 +28,14 @@ import { ArrowDown, ArrowUp } from 'lucide-react';
 export const allSkills = [
   { label: "JavaScript", icon: JavaScript },
   { label: "TypeScript", icon: TypeScript },
+  { label: "Python", icon: Python },
   { label: "Node.js", icon: Node },
   { label: "React.js", icon: react },
   { label: "Next.js", icon: next },
+  { label: "PostgreSQL", icon: datastructure },
   { label: "Express.js", icon: Express },
-   { label: "Python", icon: Python },
-   { label: "PostgreSQL", icon: datastructure },
+   
+   
   { label: "Tailwind", icon: Tailwind },
   { label: "MongoDB", icon: MongoDB },
   { label: "Redis", icon: Redis },

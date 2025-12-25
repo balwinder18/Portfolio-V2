@@ -48,7 +48,7 @@ const Socials = () => {
             <div className="w-px h-12 bg-gray-300 dark:bg-gray-700"></div>
             <a
               className="p-4 bg-gray-100 dark:bg-white rounded-full transition hover:scale-105 shadow-sm"
-              href="https://x.com/Balwinder_sb?t=NkqHaphnsZ2mCYY81ZykNA&s=09"
+              href="https://x.com/singhbalwinderr"
               target="_blank"
               rel="noopener noreferrer"
             >

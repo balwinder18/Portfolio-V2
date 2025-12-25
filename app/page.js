@@ -59,10 +59,10 @@ export default function Home() {
   <div
   className="
     relative w-full min-h-screen transition-colors duration-300
-    bg-[#f0f0f0] dark:bg-black
+    bg-[#fafafa]   dark:bg-black
   "
 >
-  <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_top,_rgba(148,163,184,0.45)_0,_transparent_55%),radial-gradient(circle_at_bottom,_rgba(148,163,184,0.25)_0,_transparent_55%)] dark:bg-none" />
+  <div className="pointer-events-none absolute inset-0 z-0 dark:bg-none" />
 
   <div className="disappear opacity-0 relative z-10">
     <main className="relative z-20 flex flex-col min-h-[100dvh] w-full max-w-5xl mx-auto items-center bg-transparent">
